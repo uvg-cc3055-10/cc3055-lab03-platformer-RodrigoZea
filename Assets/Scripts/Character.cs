@@ -8,7 +8,6 @@ public class Character : MonoBehaviour {
     Rigidbody2D rb2d;
     SpriteRenderer sr;
     Animator anim;
-    public AudioClip jumpClip;
     AudioSource src;
     public Camera cam;
     private float speed = 5f;
@@ -38,7 +37,6 @@ public class Character : MonoBehaviour {
 
         if (Input.GetButtonDown("Jump")) {
             rb2d.AddForce(Vector2.up*jumpForce);
-            src.clip = jumpClip;
             src.Play();
         }
 
