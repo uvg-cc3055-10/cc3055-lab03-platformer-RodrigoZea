@@ -724,7 +724,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8661733b3a07eb94c993e1cbd268f93c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpClip: {fileID: 8300000, guid: 9173b44419c4a724ebd7feab3f72360e, type: 3}
   cam: {fileID: 158937478}
 --- !u!95 &1762987939
 Animator:
@@ -870,7 +869,7 @@ GameObject:
   - component: {fileID: 2074950358}
   m_Layer: 0
   m_Name: Tilemap
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

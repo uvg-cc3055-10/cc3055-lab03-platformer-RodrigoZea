@@ -9,6 +9,7 @@ public class Character : MonoBehaviour {
     SpriteRenderer sr;
     Animator anim;
     AudioSource src;
+    private bool isJump = false;
     public Camera cam;
     private float speed = 5f;
     private float jumpForce = 250f;
@@ -35,10 +36,19 @@ public class Character : MonoBehaviour {
         
         sr.flipX = !facingRight;
 
-        if (Input.GetButtonDown("Jump")) {
+        if (Input.GetButtonDown("Jump") && (isJump == false)) {
             rb2d.AddForce(Vector2.up*jumpForce);
             src.Play();
+            isJump = true;
         }
 
 	}
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag.Equals("Ground"))
+        {
+            isJump = false;
+        }
+    }
 }
